@@ -8,6 +8,10 @@ const MenuWrapper = styled.div`
     width: 100%;
 `
 
+const StyledMenu = styled(Menu)`
+    justify-content: space-around;
+`
+
 export default class FootNav extends Component {
     state = { activeItem: 'home' }
 
@@ -18,8 +22,12 @@ export default class FootNav extends Component {
 
         return (
             <MenuWrapper>
-                <Menu inverted>
-                    <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+                <StyledMenu inverted>
+                    <Menu.Item
+                        name='home'
+                        active={activeItem === 'home'}
+                        onClick={this.handleItemClick}
+                    />
                     <Menu.Item
                         name='messages'
                         active={activeItem === 'messages'}
@@ -30,7 +38,7 @@ export default class FootNav extends Component {
                         active={activeItem === 'friends'}
                         onClick={this.handleItemClick}
                     />
-                </Menu>
+                </StyledMenu>
             </MenuWrapper>
         )
     }

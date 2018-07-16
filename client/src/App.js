@@ -3,9 +3,12 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
 import HomePage from './components/HomePage';
 import { Button, Icon } from 'semantic-ui-react'
+import FootNav from './components/FootNav';
 
 const AppBody = styled.div`
   text-align: center;
+  display: flex;
+  flex-direction: column;
 `
 const Title = styled.h1`
   color: rgb(240,240,240);
@@ -14,26 +17,7 @@ const Title = styled.h1`
   font-size: 21vw;
   background-color: #5F6062;
 `
-// const ButtonExampleAnimated = () => (
-//  <div>
-//    <Button animated>
-//      <Button.Content visible>Next</Button.Content>
-//      <Button.Content hidden>
-//        <Icon name='right arrow' />
-//      </Button.Content>
-//    </Button>
-//    <Button animated='vertical'>
-//      <Button.Content hidden>Shop</Button.Content>
-//      <Button.Content visible>
-//        <Icon name='shop' />
-//      </Button.Content>
-//    </Button>
-//    <Button animated='fade'>
-//      <Button.Content visible>Sign-up for a Pro account</Button.Content>
-//      <Button.Content hidden>$12.99 a month</Button.Content>
-//    </Button>
-//  </div>
-// )
+
 
 class App extends Component {
   render() {
@@ -44,6 +28,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={HomePage}/>
           </Switch>
+          <FootNav/>
         </AppBody>
       </Router>
     );

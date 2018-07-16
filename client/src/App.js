@@ -10,8 +10,8 @@ const AppBody = styled.div`
 const Title = styled.h1`
   color: rgb(240,240,240);
   margin-top: 10vh;
-  line-height: 20vh;
-  font-size: 20vw;
+  line-height: 20vw;
+  font-size: 21vw;
   background-color: #5F6062;
 `
 // const ButtonExampleAnimated = () => (

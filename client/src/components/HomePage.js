@@ -4,10 +4,10 @@ import styled from 'styled-components'
 const HomeBody = styled.div`
     p {
         margin: 10vh auto;
-        font-size: 5vh;
+        font-size: 5vw;
         color: #555358;
         background: rgba(0,0,0,0.1);
-        border-radius: 10%;
+        border-radius: 5%;
     }
 `
 

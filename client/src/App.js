@@ -9,13 +9,22 @@ const AppBody = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  div {
+    margin-top: 10vh;
+  }
 `
 const Title = styled.h1`
   color: rgb(240,240,240);
-  margin-top: 10vh;
+  width: 100%;
   line-height: 20vw;
   font-size: 21vw;
   background-color: #5F6062;
+  position: fixed;
+  @media(min-width: 310px){
+    line-height: 1em;
+    font-size: 12vh;
+  }
+
 `
 
 

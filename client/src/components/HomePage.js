@@ -6,7 +6,7 @@ const HomeBody = styled.div`
         font-family: 'Bitter', serif;
         margin: 10vh auto;
         padding: 1vh 4vw;
-        font-size: 5vw;
+        font-size: 5vh;
         color: #555358;
         background: rgba(0,0,0,0.1);
         border-radius: 5%;

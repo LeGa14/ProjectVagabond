@@ -3,7 +3,9 @@ import styled from 'styled-components'
 
 const HomeBody = styled.div`
     p {
+        font-family: 'Bitter', serif;
         margin: 10vh auto;
+        padding: 1vh 4vw;
         font-size: 5vw;
         color: #555358;
         background: rgba(0,0,0,0.1);

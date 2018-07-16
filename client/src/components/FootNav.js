@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Icon, Menu } from 'semantic-ui-react'
 import styled from 'styled-components'
 
 const MenuWrapper = styled.div`
@@ -10,6 +10,7 @@ const MenuWrapper = styled.div`
 
 const StyledMenu = styled(Menu)`
     justify-content: space-around;
+    padding-left: 45px;
 `
 
 export default class FootNav extends Component {
@@ -22,22 +23,31 @@ export default class FootNav extends Component {
 
         return (
             <MenuWrapper>
-                <StyledMenu inverted>
+                <StyledMenu inverted icon='labeled'>
                     <Menu.Item
                         name='home'
                         active={activeItem === 'home'}
                         onClick={this.handleItemClick}
-                    />
+                    >
+                        <Icon name='user' />
+                        Log In
+                    </Menu.Item>
                     <Menu.Item
                         name='messages'
                         active={activeItem === 'messages'}
                         onClick={this.handleItemClick}
-                    />
+                    >
+                        <Icon name='home' />
+                        Home
+                    </Menu.Item>
                     <Menu.Item
                         name='friends'
                         active={activeItem === 'friends'}
                         onClick={this.handleItemClick}
-                    />
+                    >
+                        <Icon name='building' />
+                        Cities
+                    </Menu.Item>
                 </StyledMenu>
             </MenuWrapper>
         )

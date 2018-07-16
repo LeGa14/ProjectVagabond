@@ -3,7 +3,9 @@ import { Menu } from 'semantic-ui-react'
 import styled from 'styled-components'
 
 const MenuWrapper = styled.div`
-    flex-shrink: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 `
 
 export default class FootNav extends Component {

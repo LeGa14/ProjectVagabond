@@ -4,7 +4,10 @@ import styled from 'styled-components'
 const HomeBody = styled.div`
     p {
         margin: 10vh auto;
-        
+        font-size: 5vh;
+        color: #555358;
+        background: rgba(0,0,0,0.1);
+        border-radius: 10%;
     }
 `
 
@@ -12,7 +15,7 @@ class HomePage extends Component {
     render() {
         return (
             <HomeBody>
-                <p>Weclome to your New number 1 app for seeing sites and connecting with other Travelers</p>
+                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
             </HomeBody>
         );
     }

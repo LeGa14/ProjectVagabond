@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import HomePage from './components/HomePage';
+import HomePage from './components/HomePage'
 import { Button, Icon } from 'semantic-ui-react'
-import FootNav from './components/FootNav';
-import DesktopNav from './components/DeskTopNav';
+import FootNav from './components/FootNav'
+import DesktopNav from './components/DeskTopNav'
+import IndividualCity from './components/IndividualCity'
+import NewPostForm from './components/NewPostForm'
 
 const AppBody = styled.div`
   text-align: center;
@@ -46,6 +48,8 @@ class App extends Component {
           <Title>Vagabond</Title>
           <Switch>
             <Route exact path='/' component={HomePage}/>
+            <Route exact path='/cities/:city_id' component={IndividualCity}/>
+            <Route exact path='/cities/:city_id/posts/new' component={NewPostForm}/>
           </Switch>
           <FootNav/>
         </AppBody>

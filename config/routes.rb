@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   namespace :api do
-    get 'posts/index'
-    get 'posts/show'
-    get 'posts/create'
-    get 'posts/update'
-    get 'posts/destroy'
+    namespace :cities do
+      get 'posts/index'
+      get 'posts/show'
+      get 'posts/create'
+      get 'posts/update'
+      get 'posts/destroy'
+    end
   end
   namespace :api do
     get 'cities/index'

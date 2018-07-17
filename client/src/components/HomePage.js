@@ -19,7 +19,7 @@ class HomePage extends Component {
     render() {
         return (
             <HomeBody>
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
+                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers. Post about your favorite cities and see what others have to say about the sites they have been to. Here at Vagabond, we love travel and nothing beats first-hand experiences, but we'd still love to hear about your adventures.</p>
             </HomeBody>
         );
     }

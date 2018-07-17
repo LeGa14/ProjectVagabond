@@ -17,6 +17,7 @@ class IndividualCity extends Component {
     const cityId = this.props.match.params.city_id
     axios.get(`/api/cities/${cityId}`)
       .then((res) => {
+        console.log(res)
         this.setState({
           name: res.data.name,
           img_url: res.data.img_url

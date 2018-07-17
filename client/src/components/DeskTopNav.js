@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const TitleNav = styled.h1`
@@ -18,6 +19,10 @@ const TitleNav = styled.h1`
         font-size: 13vw;
         line-height: 12vw;
       }
+  }
+  a {
+    padding: 0;
+    margin: 0;
   }
   .ui.menu .item{
       color: rgb(213,214,215)
@@ -44,7 +49,7 @@ export default class DesktopNav extends Component {
       <TitleNav>
         <Menu pointing secondary>
         <h1>Vagabond</h1>
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Link to="/"><Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} /></Link>
           <Menu.Item
             name='Login'
             active={activeItem === 'Login'}

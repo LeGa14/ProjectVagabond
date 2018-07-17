@@ -300,3 +300,22 @@ puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
   ↳ db/seeds.rb:43
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:43
+Started GET "/api/cities" for ::1 at 2018-07-17 14:25:48 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/benjaminmccombs/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 20ms (Views: 9.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/cities/6/posts" for ::1 at 2018-07-17 14:25:56 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"6"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 6]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 35ms (Views: 12.2ms | ActiveRecord: 8.5ms)
+
+

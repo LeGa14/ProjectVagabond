@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
+import axios from 'axios'
 import { Card, Icon, Image } from 'semantic-ui-react'
 import CityCardStyle from './styles/CityCardstyles';
+import { Link } from 'react-router-dom'
 
 const HomeBody = styled.div`
     p {
@@ -33,28 +35,51 @@ const ListIntro = styled.div`
 `
 
 class HomePage extends Component {
+
+    state = {
+        cities: []
+    }
+
+    componentDidMount() {
+        this.fetchCities()
+    }
+
+    fetchCities = () => {
+        axios.get('/api/cities').then((res) => {
+            console.log(res.data)
+            this.setState({ cities: res.data })
+        })
+    }
+
     render() {
-        return (
-            <HomeBody>
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers. Post about your favorite cities and see what others have to say about the sites they have been to. Here at Vagabond, we love travel and nothing beats first-hand experiences, but we'd still love to hear about your adventures.</p>
-                    <ListIntro>Where have you Been?</ListIntro>
-                <CityCardStyle>
+
+        const cityList = this.state.cities.map((city) => {
+            return (
+                <div>
+                <CityCardStyle key={city.id}>
                     <Card>
-                        <Image src='https://images.unsplash.com/photo-1504889100631-d557a48f0d30?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3e0bbe98f30034814a40c517f9d261b9&auto=format&fit=crop&w=676&q=80' />
+                        <Image src={city.img_url} />
                         <Card.Content>
-                            <Card.Header>Atlanta</Card.Header>
-                            <Card.Meta>Where we call "Home"</Card.Meta>
-                            <Card.Description>A thriving metropolitan city situated in the South-East United States.</Card.Description>
+                            <Card.Header>{city.name}</Card.Header>
+                            {/* <Card.Meta>Where we call "Home"</Card.Meta>
+                            <Card.Description>A thriving metropolitan city situated in the South-East United States.</Card.Description> */}
                         </Card.Content>
                         <Card.Content extra>
-                            <a>
                                 <Icon name='comment' />
                                 {/* we can do a comment count here if desired */}
-                                Posts
-                             </a>
+                                <Link to={`/cities/${city.id}`}>View Comments</Link>
                         </Card.Content>
                     </Card>
                 </CityCardStyle>
+              </div>
+            )
+        })
+
+        return (
+            <HomeBody>
+                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers. Post about your favorite cities and see what others have to say about the sites they have been to. Here at Vagabond, we love travel and nothing beats first-hand experiences, but we'd still love to hear about your adventures.</p>
+                <ListIntro>Where have you Been?</ListIntro>
+                {cityList}
             </HomeBody>
         );
     }

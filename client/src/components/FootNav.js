@@ -19,6 +19,15 @@ const StyledMenu = styled(Menu)`
     }
       @media(min-height: 750px){
        visibility: hidden;
+       position:absolute;
+       max-width: 2%;
+       z-index: -50;
+       height: 0vh;
+       font-size: 0vh;
+       margin:0;
+       .ui.labeled.icon.menu .item{
+          line-height: 0vh;
+       }
     }
 `
 

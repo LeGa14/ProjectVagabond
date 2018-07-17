@@ -13,6 +13,10 @@ const TitleNav = styled.h1`
       margin-bottom: 0;
       line-height: 5.7rem;
       font-size: 6rem;
+      @media(max-width: 640px){
+        font-size: 13vw;
+        line-height: 12vw;
+      }
   }
   .ui.menu .item{
       color: rgb(213,214,215)
@@ -20,11 +24,7 @@ const TitleNav = styled.h1`
   .ui.secondary.pointing.menu .active.item{
       color: rgb(248,249,250)
   }
-  @media(min-width: 450px){
-    line-height: 1em;
-    font-size: 6.5em;
-  }
-  @media(max-height: 779px){
+  @media(max-height: 749px){
        visibility: hidden;
     }
     max-width: 100%;

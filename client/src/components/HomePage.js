@@ -20,12 +20,7 @@ class HomePage extends Component {
         return (
             <HomeBody>
                 <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers</p>
-             </HomeBody>
+            </HomeBody>
         );
     }
 }

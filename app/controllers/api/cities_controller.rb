@@ -6,7 +6,7 @@ class Api::CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
-    render json: @artist
+    render json: @city
   end
 
   def create
@@ -21,7 +21,7 @@ class Api::CitiesController < ApplicationController
   end
 
   def destroy
-    @city = City.find(params[id]).destroy
+    @city = City.find(params[:id]).destroy
     render status: :ok
   end
 

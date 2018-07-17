@@ -50,7 +50,7 @@ class HomePage extends Component {
                             <a>
                                 <Icon name='comment' />
                                 {/* we can do a comment count here if desired */}
-                                Comments
+                                Posts
                              </a>
                         </Card.Content>
                     </Card>

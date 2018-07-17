@@ -1,9 +1,9 @@
 *.log
 *.tmp
 log/*.log
-tmp/*
+
 .DS_Store
 log/*
-tmp/
+
 /spec/tmp
 node_modules/

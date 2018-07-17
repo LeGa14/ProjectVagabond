@@ -88,3 +88,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (602.3ms)[0m  [1m[35mCREATE DATABASE "vagabond_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (403.0ms)[0m  [1m[35mCREATE DATABASE "vagabond_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9

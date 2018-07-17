@@ -48,8 +48,8 @@ class App extends Component {
           <Title>Vagabond</Title>
           <Switch>
             <Route exact path='/' component={HomePage}/>
-            {/* <Route exact path='/:city' component={IndividualCity}/> */}
-            <Route exact path='/:city/post' component={Newpost}/>
+            <Route exact path='/cities/city_id' component={IndividualCity}/>
+            <Route exact path='/cities/city_id/newpost'component={Newpost}/>
           </Switch>
           <FootNav/>
         </AppBody>

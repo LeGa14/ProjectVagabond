@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
 import styled from 'styled-components'
-import HomePage from './components/HomePage';
+import HomePage from './components/HomePage'
 import { Button, Icon } from 'semantic-ui-react'
-import FootNav from './components/FootNav';
-import DesktopNav from './components/DeskTopNav';
-import IndividualCity from './components/IndividualCity';
+import FootNav from './components/FootNav'
+import DesktopNav from './components/DeskTopNav'
+import IndividualCity from './components/IndividualCity'
+import Newpost from './components/Newpost'
 
 const AppBody = styled.div`
   text-align: center;
@@ -47,7 +48,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/:city' component={IndividualCity}/>
-            <Route exact path='/:city/post' component={IndividualCity}/>
+            <Route exact path='/:city/post' component={Newpost}/>
           </Switch>
           <FootNav/>
         </AppBody>

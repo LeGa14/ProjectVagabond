@@ -353,3 +353,355 @@ Processing by Api::CitiesController#index as HTML
 Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 2.3ms)
 
 
+Started GET "/api/cities/6" for 127.0.0.1 at 2018-07-17 15:12:00 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCity Load (5.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 22ms (Views: 5.5ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/api/cities/this.props.match.params.city_id/posts" for 127.0.0.1 at 2018-07-17 15:48:11 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/benjaminmccombs/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/api/cities/this.props.match.params.city_id/posts"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/cities/this.props.match.params.city_id/posts" for 127.0.0.1 at 2018-07-17 15:48:49 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/api/cities/this.props.match.params.city_id/posts"):
+  
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/cities/6/posts" for 127.0.0.1 at 2018-07-17 15:49:45 -0400
+Processing by Api::PostsController#create as HTML
+  Parameters: {"title"=>"Test", "body"=>"alsdkf;alksdjga;lsdkgja;sdlkfjaf", "city_id"=>"6", "post"=>{"title"=>"Test", "body"=>"alsdkf;alksdjga;lsdkgja;sdlkfjaf"}}
+  [1m[36mCity Load (7.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+Completed 422 Unprocessable Entity in 55ms (ActiveRecord: 26.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/posts_controller.rb:14:in `create'
+Started POST "/api/cities/6/posts" for 127.0.0.1 at 2018-07-17 15:51:12 -0400
+Processing by Api::PostsController#create as HTML
+  Parameters: {"title"=>"Test", "body"=>"a;ldjhf;alksdjga;lskg", "city_id"=>"6", "post"=>{"title"=>"Test", "body"=>"a;ldjhf;alksdjga;lskg"}}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/posts_controller.rb:14:in `create'
+Started POST "/api/cities/6/posts" for ::1 at 2018-07-17 15:55:33 -0400
+Processing by Api::PostsController#create as */*
+  Parameters: {"city_id"=>"6", "user_id"=>6, "title"=>"Atlanta is great!", "body"=>"I love it here. there's so much happening in this city right now.", "post"=>{"city_id"=>"6", "user_id"=>6, "title"=>"Atlanta is great!", "body"=>"I love it here. there's so much happening in this city right now."}}
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+Unpermitted parameters: :city_id, :user_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/posts_controller.rb:14:in `create'
+Started GET "/api/cities/6/posts" for ::1 at 2018-07-17 15:55:43 -0400
+Processing by Api::PostsController#index as */*
+  Parameters: {"city_id"=>"6", "post"=>{}}
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (6.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 6]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 14ms (Views: 5.1ms | ActiveRecord: 7.4ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mPost Load (6.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mPost Destroy (6.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:1
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mPost Destroy (0.3ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:1
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 6]]
+  ↳ db/seeds.rb:2
+  [1m[36mCity Destroy (12.3ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:2
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:2
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 7]]
+  ↳ db/seeds.rb:2
+  [1m[36mCity Destroy (0.6ms)[0m  [1m[31mDELETE FROM "cities" WHERE "cities"."id" = $1[0m  [["id", 7]]
+  ↳ db/seeds.rb:2
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (7.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "admin", "current_city", "fav_city", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "John Doe"], ["email", "johns@e.mail"], ["admin", false], ["current_city", "Atlanta"], ["fav_city", "Atlanta"], ["bio", "nonsense text"], ["created_at", "2018-07-17 19:57:04.439853"], ["updated_at", "2018-07-17 19:57:04.439853"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "admin", "current_city", "fav_city", "bio", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "Ryu Fake"], ["email", "streetfighter@cap.com"], ["admin", false], ["current_city", "Miami"], ["fav_city", "Atlanta"], ["bio", "Hadoken"], ["created_at", "2018-07-17 19:57:04.470893"], ["updated_at", "2018-07-17 19:57:04.470893"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mCity Create (0.6ms)[0m  [1m[32mINSERT INTO "cities" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Atlanta"], ["img_url", "https://images.unsplash.com/photo-1504889100631-d557a48f0d30?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3e0bbe98f30034814a40c517f9d261b9&auto=format&fit=crop&w=676&q=80"], ["created_at", "2018-07-17 19:57:04.476021"], ["updated_at", "2018-07-17 19:57:04.476021"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mCity Create (1.5ms)[0m  [1m[32mINSERT INTO "cities" ("name", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Miami"], ["img_url", "https://images.unsplash.com/photo-1490309465502-86ef8656e567?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a8a4a52ba714be6ccb562ac679636227&auto=format&fit=crop&w=1334&q=80"], ["created_at", "2018-07-17 19:57:04.478795"], ["updated_at", "2018-07-17 19:57:04.478795"]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ db/seeds.rb:30
+  [1m[36mPost Create (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("city_id", "user_id", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city_id", 8], ["user_id", 7], ["title", "Atlanta is great!"], ["body", "I love it here. there's so much happening in this city right now."], ["created_at", "2018-07-17 19:57:04.496173"], ["updated_at", "2018-07-17 19:57:04.496173"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mPost Create (3.6ms)[0m  [1m[32mINSERT INTO "posts" ("city_id", "user_id", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city_id", 8], ["user_id", 8], ["title", "I like Atlanta"], ["body", "Not as much as a I had hoped for, but cool place nonetheless"], ["created_at", "2018-07-17 19:57:04.507111"], ["updated_at", "2018-07-17 19:57:04.507111"]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mPost Create (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("city_id", "user_id", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city_id", 9], ["user_id", 8], ["title", "Miami is great"], ["body", "This place is hot and the fighting is fun."], ["created_at", "2018-07-17 19:57:04.514986"], ["updated_at", "2018-07-17 19:57:04.514986"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+Started GET "/api/cities/8/posts" for ::1 at 2018-07-17 15:57:13 -0400
+Processing by Api::PostsController#index as */*
+  Parameters: {"city_id"=>"8", "post"=>{}}
+  [1m[36mCity Load (1.0ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 8]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/cities/8/posts" for ::1 at 2018-07-17 15:57:34 -0400
+Processing by Api::PostsController#create as */*
+  Parameters: {"city_id"=>"8", "user_id"=>7, "title"=>"Atlanta is great!", "body"=>"I love it here. there's so much happening in this city right now.", "post"=>{"city_id"=>"8", "user_id"=>7, "title"=>"Atlanta is great!", "body"=>"I love it here. there's so much happening in this city right now."}}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+Unpermitted parameters: :city_id, :user_id
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[35m (1.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/posts_controller.rb:14:in `create'
+Started GET "/api/cities/8/posts" for ::1 at 2018-07-17 15:57:56 -0400
+Processing by Api::PostsController#index as */*
+  Parameters: {"city_id"=>"8", "post"=>{}}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 8]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/cities/8/posts" for ::1 at 2018-07-17 15:59:26 -0400
+Processing by Api::PostsController#create as */*
+  Parameters: {"city_id"=>"8", "user_id"=>7, "title"=>"Hotlanta is great!", "body"=>"I love it here. there's so much happening in this city right now.", "post"=>{"city_id"=>"8", "user_id"=>7, "title"=>"Hotlanta is great!", "body"=>"I love it here. there's so much happening in this city right now."}}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[36mPost Create (6.5ms)[0m  [1m[32mINSERT INTO "posts" ("city_id", "user_id", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city_id", 8], ["user_id", 7], ["title", "Hotlanta is great!"], ["body", "I love it here. there's so much happening in this city right now."], ["created_at", "2018-07-17 19:59:26.360944"], ["updated_at", "2018-07-17 19:59:26.360944"]]
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+Completed 200 OK in 46ms (Views: 0.3ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/api/cities/8/posts" for ::1 at 2018-07-17 15:59:31 -0400
+Processing by Api::PostsController#index as */*
+  Parameters: {"city_id"=>"8", "post"=>{}}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 8]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/cities/6/posts" for 127.0.0.1 at 2018-07-17 15:59:42 -0400
+Processing by Api::PostsController#create as HTML
+  Parameters: {"title"=>"Test", "body"=>"a;ldjhf;alksdjga;lskgkj", "city_id"=>"6", "post"=>{"title"=>"Test", "body"=>"a;ldjhf;alksdjga;lskgkj"}}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find City with 'id'=6):
+  
+app/controllers/api/posts_controller.rb:13:in `create'
+Started POST "/api/cities/6/posts" for 127.0.0.1 at 2018-07-17 16:00:12 -0400
+Processing by Api::PostsController#create as HTML
+  Parameters: {"title"=>"Test", "body"=>"a;ldjhf;alksdjga;lskgkj", "city_id"=>"6", "post"=>{"title"=>"Test", "body"=>"a;ldjhf;alksdjga;lskgkj"}}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+Completed 404 Not Found in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find City with 'id'=6):
+  
+app/controllers/api/posts_controller.rb:13:in `create'
+Started GET "/api/cities/8" for 127.0.0.1 at 2018-07-17 16:00:22 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCity Load (3.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/api/cities/8/posts" for 127.0.0.1 at 2018-07-17 16:00:36 -0400
+Processing by Api::PostsController#create as HTML
+  Parameters: {"title"=>"Test", "body"=>"a;lsdkjf;alksdg;laksjdfg;lafsdjkg;lakdsjgfasdgsdfgsadfgsdfg", "city_id"=>"8", "post"=>{"title"=>"Test", "body"=>"a;lsdkjf;alksdg;laksjdfg;lafsdjkg;lakdsjgfasdgsdfgsadfgsdfg"}}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+Completed 422 Unprocessable Entity in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: User must exist):
+  
+app/controllers/api/posts_controller.rb:14:in `create'
+Started POST "/api/cities/8/posts" for 127.0.0.1 at 2018-07-17 16:03:37 -0400
+Processing by Api::PostsController#create as HTML
+  Parameters: {"title"=>"Test", "body"=>"asdfadsfasdfasdfadsfads", "user_id"=>7, "city_id"=>"8", "post"=>{"user_id"=>7, "title"=>"Test", "body"=>"asdfadsfasdfasdfadsfads"}}
+  [1m[36mCity Load (1.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:13
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[36mPost Create (2.6ms)[0m  [1m[32mINSERT INTO "posts" ("city_id", "user_id", "title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["city_id", 8], ["user_id", 7], ["title", "Test"], ["body", "asdfadsfasdfasdfadsfads"], ["created_at", "2018-07-17 20:03:37.164080"], ["updated_at", "2018-07-17 20:03:37.164080"]]
+  ↳ app/controllers/api/posts_controller.rb:14
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/posts_controller.rb:14
+Completed 200 OK in 63ms (Views: 2.3ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/api/cities/8" for 127.0.0.1 at 2018-07-17 16:03:37 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/cities/8/posts" for ::1 at 2018-07-17 16:03:44 -0400
+Processing by Api::PostsController#index as */*
+  Parameters: {"city_id"=>"8", "post"=>{}}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 8]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+

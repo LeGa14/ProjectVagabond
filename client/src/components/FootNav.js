@@ -17,7 +17,7 @@ const StyledMenu = styled(Menu)`
     a {
         font-size: 2vh;
     }
-      @media(min-height: 780px){
+      @media(min-height: 750px){
        visibility: hidden;
     }
 `

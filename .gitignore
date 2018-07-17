@@ -1,4 +1,8 @@
 /log
-/tmp
+tmp/
 /spec/tmp
 node_modules/
+**/*.log
+.DS_Store
+log/*
+

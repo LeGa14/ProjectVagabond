@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import CityShowWrapper from './styles/CityShowWrapper';
+import { Button, Popup } from 'semantic-ui-react';
 
 class IndividualCity extends Component {
   state = {
@@ -24,10 +26,11 @@ class IndividualCity extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Working In Individual City</h1>
+      <CityShowWrapper>
+        <h1>{this.state.name}</h1>
         <img src={this.state.img_url} />
-      </div>
+        <Popup trigger={<Button circular icon='plus' size='big' color='black' href='/cities/:city_id/posts/new' />} content='Add a new posts to this city'/>
+      </CityShowWrapper>
     );
   }
 }

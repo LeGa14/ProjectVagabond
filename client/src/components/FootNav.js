@@ -6,11 +6,20 @@ const MenuWrapper = styled.div`
     position: fixed;
     bottom: 0px;
     width: 100%;
+    .ui.inverted.menu {
+        background-color: rgb(56,57,58);
+    }
 `
 
 const StyledMenu = styled(Menu)`
     justify-content: space-around;
     padding-left: 45px;
+    a {
+        font-size: 2vh;
+    }
+      @media(min-height: 780px){
+       visibility: hidden;
+    }
 `
 
 export default class FootNav extends Component {
@@ -46,7 +55,7 @@ export default class FootNav extends Component {
                         onClick={this.handleItemClick}
                     >
                         <Icon name='building' />
-                        Cities
+                        Top Sites
                     </Menu.Item>
                 </StyledMenu>
             </MenuWrapper>

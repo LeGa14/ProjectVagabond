@@ -43,7 +43,7 @@ export default class FootNav extends Component {
             <MenuWrapper>
                 <StyledMenu inverted icon='labeled'>
                     <Menu.Item
-                        name='home'
+                        name='home' href='/'
                         active={activeItem === 'home'}
                         onClick={this.handleItemClick}
                     >

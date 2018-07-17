@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const CityCardStyle = styled.div`
  .ui.card {
     margin: 0 auto;
+    font-family: 'Bitter', serif;
     margin-bottom: 5vh;
     width: 80%;
     z-index: 0;

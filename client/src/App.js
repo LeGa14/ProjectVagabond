@@ -10,6 +10,7 @@ const AppBody = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
   div {
     margin-top: 10vh;
     @media(min-height: 525px){
@@ -29,7 +30,7 @@ const Title = styled.h1`
     line-height: 1em;
     font-size: 6.5em;
   }
-  @media(min-height: 780px){
+  @media(min-height: 750px){
        visibility: hidden;
     }
 

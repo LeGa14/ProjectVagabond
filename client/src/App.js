@@ -5,8 +5,8 @@ import HomePage from './components/HomePage'
 import { Button, Icon } from 'semantic-ui-react'
 import FootNav from './components/FootNav'
 import DesktopNav from './components/DeskTopNav'
-import IndividualCity from './components/IndividualCity'
-import Newpost from './components/Newpost'
+// import IndividualCity from './components/IndividualCity'
+import Newpost from './components/NewPost'
 
 const AppBody = styled.div`
   text-align: center;
@@ -48,7 +48,7 @@ class App extends Component {
           <Title>Vagabond</Title>
           <Switch>
             <Route exact path='/' component={HomePage}/>
-            <Route exact path='/:city' component={IndividualCity}/>
+            {/* <Route exact path='/:city' component={IndividualCity}/> */}
             <Route exact path='/:city/post' component={Newpost}/>
           </Switch>
           <FootNav/>

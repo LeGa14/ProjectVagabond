@@ -20,10 +20,6 @@ const TitleNav = styled.h1`
         line-height: 12vw;
       }
   }
-  a {
-    padding: 0;
-    margin: 0;
-  }
   .ui.menu .item{
       color: rgb(213,214,215)
   }
@@ -49,7 +45,7 @@ export default class DesktopNav extends Component {
       <TitleNav>
         <Menu pointing secondary>
         <h1>Vagabond</h1>
-          <Link to="/"><Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} /></Link>
+          <Menu.Item name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick} />
           <Menu.Item
             name='Login'
             active={activeItem === 'Login'}

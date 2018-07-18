@@ -8,6 +8,8 @@ import DesktopNav from './components/DeskTopNav'
 import IndividualCity from './components/IndividualCity'
 import NewPostForm from './components/NewPostForm'
 import EditPostForm from './components/EditPostForm';
+import ShowPost from './components/ShowPost'
+
 
 const AppBody = styled.div`
   text-align: center;
@@ -19,6 +21,11 @@ const AppBody = styled.div`
     @media(min-height: 525px){
       margin-top: 2rem;
     }
+  }
+
+  .post-show-body {
+    background: white;
+    border: 1vw solid rgb(69,83,68);
   }
 `
 const Title = styled.h1`
@@ -56,6 +63,7 @@ class App extends Component {
             <Route exact path='/cities/:city_id' component={IndividualCity}/>
             <Route exact path='/cities/:city_id/posts/new' component={NewPostForm}/>
             <Route exact path='/cities/:city_id/posts/:post_id/edit' component={EditPostForm}/>
+            <Route exact path='/cities/:city_id/posts/:post_id' component={ShowPost}/>
           </Switch>
           <FootSpacer/>
           <FootNav/>

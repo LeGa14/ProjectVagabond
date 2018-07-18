@@ -52,7 +52,7 @@ class IndividualCity extends Component {
           return (
             <Comment>
               <Comment.Content>
-                <Comment.Author as='a'>{post.title}</Comment.Author>
+                <Comment.Author as='a' href={`/cities/${this.state.city.id}/posts/${post.id}`}>{post.title}</Comment.Author>
                 <Comment.Metadata>
                   <div>{post.created_at}</div>
                 </Comment.Metadata>

@@ -1842,3 +1842,516 @@ Processing by Api::PostsController#index as */*
   ↳ app/controllers/api/posts_controller.rb:4
 Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.9ms)
 
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-18 13:42:31 -0400
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/L.E.G./.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 20ms (Views: 8.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-18 13:43:02 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (6.8ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/api/cities/1" for 127.0.0.1 at 2018-07-18 13:43:11 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/1/posts" for 127.0.0.1 at 2018-07-18 13:43:11 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"1"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (6.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 1]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 44ms (Views: 15.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-18 13:43:16 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 13:43:18 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/cities/2/posts" for 127.0.0.1 at 2018-07-18 13:43:18 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"2"}
+  [1m[36mCity Load (1.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 2]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 13:51:17 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (1.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/cities/2/posts" for 127.0.0.1 at 2018-07-18 13:51:18 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"2"}
+  [1m[36mCity Load (4.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (7.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 2]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 15ms (Views: 2.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/cities/2posts" for 127.0.0.1 at 2018-07-18 13:51:31 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2posts"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/cities/2posts/posts" for 127.0.0.1 at 2018-07-18 13:51:31 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"2posts"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 2]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/cities/1/posts" for ::1 at 2018-07-18 13:53:33 -0400
+Processing by Api::PostsController#index as */*
+  Parameters: {"city_id"=>"1", "post"=>{}}
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 1]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/cities/1/posts/2" for ::1 at 2018-07-18 13:53:42 -0400
+Processing by Api::PostsController#show as */*
+  Parameters: {"city_id"=>"1", "id"=>"2", "post"=>{}}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 13:56:18 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (5.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 27ms (Views: 7.8ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 13:56:18 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 13:56:49 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (1.8ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 13:56:49 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:03:41 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 14:03:41 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:04:19 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 14:04:19 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:04:38 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.9ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 14:04:38 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:05:04 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 14:05:04 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:05:14 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 14:05:14 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:05:40 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 14:05:40 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:06:06 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (7.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/api/cities/2/posts/1" for 127.0.0.1 at 2018-07-18 14:06:06 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"1"}
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:06:07 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:06:07 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:07:32 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:07:32 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (27.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 29ms (Views: 0.8ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:07:54 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:07:54 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:08:17 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (1.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:08:17 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:08:21 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (9.0ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 12ms (Views: 1.9ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:08:21 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:08:30 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:08:30 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:08:47 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:08:47 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:09:44 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:09:45 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (13.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 16ms (Views: 1.1ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:10:30 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:10:30 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:10:44 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:10:44 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:11:16 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:11:16 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:11:20 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:11:20 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:12:19 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.8ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:12:19 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:12:36 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:12:36 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:12:44 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:12:44 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/cities/2" for 127.0.0.1 at 2018-07-18 14:13:03 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/2/posts/2" for 127.0.0.1 at 2018-07-18 14:13:03 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"2", "id"=>"2"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+

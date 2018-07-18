@@ -17,8 +17,16 @@ const StyledMenu = styled(Menu)`
     a {
         font-size: 2vh;
     }
-      @media(min-height: 780px){
+      @media(min-height: 750px){
        visibility: hidden;
+       position:absolute;
+       max-width: 2%;
+       height: 0vh;
+       font-size: 0vh;
+       margin:0;
+       .ui.labeled.icon.menu .item{
+          line-height: 0vh;
+       }
     }
 `
 
@@ -42,7 +50,7 @@ export default class FootNav extends Component {
                         Log In
                     </Menu.Item>
                     <Menu.Item
-                        name='messages'
+                        name='messages'href='/'
                         active={activeItem === 'messages'}
                         onClick={this.handleItemClick}
                     >

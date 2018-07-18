@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Segment } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const TitleNav = styled.h1`
@@ -9,10 +10,15 @@ const TitleNav = styled.h1`
   font-size: 21vw;
   background-color: rgb(70,71,72);
   position: fixed;
+  z-index: 2;
   h1{
       margin-bottom: 0;
       line-height: 5.7rem;
       font-size: 6rem;
+      @media(max-width: 640px){
+        font-size: 13vw;
+        line-height: 12vw;
+      }
   }
   .ui.menu .item{
       color: rgb(213,214,215)
@@ -20,11 +26,7 @@ const TitleNav = styled.h1`
   .ui.secondary.pointing.menu .active.item{
       color: rgb(248,249,250)
   }
-  @media(min-width: 450px){
-    line-height: 1em;
-    font-size: 6.5em;
-  }
-  @media(max-height: 779px){
+  @media(max-height: 749px){
        visibility: hidden;
     }
     max-width: 100%;
@@ -43,7 +45,7 @@ export default class DesktopNav extends Component {
       <TitleNav>
         <Menu pointing secondary>
         <h1>Vagabond</h1>
-          <Menu.Item name='home' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Menu.Item name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick} />
           <Menu.Item
             name='Login'
             active={activeItem === 'Login'}

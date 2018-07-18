@@ -13,11 +13,10 @@ const HomeBody = styled.div`
         margin-bottom: 35rem;
         padding: 1vh 4vw;
         font-size: 1.5rem;
-        color: rgb(197,198,199);
-        background: rgba(0,0,0,0.8);
-        border-radius: 5%;
+        background-color: rgb(69,83,68);
+        color: rgb(210,211,212);
         max-width: 100%;
-        box-shadow: 2px 3px rgba(0,0,0,0.6);
+        box-shadow: 1px 1px rgba(0,0,0,0.6);
         @media(max-width: 660px) {
             font-size: 1rem;
         }
@@ -28,10 +27,10 @@ const ListIntro = styled.div`
     font-size: 3rem;
     font-weight: 700;
     max-width:80%;
-    color: rgb(209,210,211);
-    background-color: rgba(29,30,31,0.9);
+    background-color: rgb(69,83,68);
+    color: rgb(210,211,212);
+    box-shadow: 1px 1px rgba(0,0,0,0.6);
     line-height: 3rem;
-    border-radius: 4%;
 `
 
 class HomePage extends Component {

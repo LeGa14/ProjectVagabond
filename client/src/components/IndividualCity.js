@@ -32,6 +32,7 @@ class IndividualCity extends Component {
       <CityShowWrapper>
         <h1>{this.state.city.name}</h1>
         <img src={this.state.city.img_url} />
+        <p>
         <Header as='h3' dividing>
           Posts
           <Popup trigger={<Button circular icon='plus' size='big' color='black' href='/cities/:city_id/posts/new' />} content='Add a new posts to this city' />
@@ -49,6 +50,7 @@ class IndividualCity extends Component {
             </Comment>
           )
         })}
+        </p>
       </CityShowWrapper>
     );
   }

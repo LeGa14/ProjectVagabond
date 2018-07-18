@@ -11,7 +11,7 @@ const CityCardStyle = styled.div`
     background-color: rgb(230,231,232);
     &:hover{
      box-shadow: none;
-     width: 90%;
+     width: 82%;
     }
  }
 `

@@ -29,6 +29,7 @@ const Title = styled.h1`
   background-color: rgb(60,61,62);
   position: fixed;
   margin-top: 0;
+  z-index: 4;
   @media(min-width: 450px){
     line-height: 1em;
     font-size: 6.5em;
@@ -36,9 +37,12 @@ const Title = styled.h1`
   @media(min-height: 750px){
        visibility: hidden;
     }
-
 `
 
+const FootSpacer = styled.div`
+    height: 15vh;
+    width: 100%;
+`
 
 class App extends Component {
   render() {
@@ -53,6 +57,7 @@ class App extends Component {
             <Route exact path='/cities/:city_id/posts/new' component={NewPostForm}/>
             <Route exact path='/cities/:city_id/posts/:post_id/edit' component={EditPostForm}/>
           </Switch>
+          <FootSpacer/>
           <FootNav/>
         </AppBody>
       </Router>

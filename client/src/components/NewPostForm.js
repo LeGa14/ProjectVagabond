@@ -42,7 +42,7 @@ class NewPostForm extends Component {
     state = {
         title: '',
         body: '',
-        user_id: 7
+        user_id: 1
     }
 
     handleChange = (event) => {

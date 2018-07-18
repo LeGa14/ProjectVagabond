@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const CityCardStyle = styled.div`
  .ui.card {
     margin: 0 auto;
+    font-family: 'Bitter', serif;
     margin-bottom: 5vh;
     width: 80%;
     z-index: 0;
@@ -10,7 +11,7 @@ const CityCardStyle = styled.div`
     background-color: rgb(230,231,232);
     &:hover{
      box-shadow: none;
-     width: 90%;
+     width: 82%;
     }
  }
 `

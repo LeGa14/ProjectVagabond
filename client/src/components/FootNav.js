@@ -21,7 +21,6 @@ const StyledMenu = styled(Menu)`
        visibility: hidden;
        position:absolute;
        max-width: 2%;
-       z-index: -50;
        height: 0vh;
        font-size: 0vh;
        margin:0;
@@ -43,7 +42,7 @@ export default class FootNav extends Component {
             <MenuWrapper>
                 <StyledMenu inverted icon='labeled'>
                     <Menu.Item
-                        name='home'
+                        name='home' href='/'
                         active={activeItem === 'home'}
                         onClick={this.handleItemClick}
                     >

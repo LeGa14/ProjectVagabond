@@ -22,10 +22,21 @@ class IndividualCity extends Component {
         city: cityResponse.data,
         posts: postsResponse.data
       })
+      console.log(this.state)
     } catch (err) {
       console.error(err)
     }
   }
+
+  postDelete = async (id) => {
+    const deletePost = await axios.delete(`/api/cities/${this.state.city.id}/posts/${id}`)
+    const setNewState = await axios.get(`/api/cities/${this.state.city.id}/posts`)
+
+    this.setState({
+      posts: setNewState.data
+    })
+    }
+ 
 
   render() {
     return (
@@ -53,6 +64,14 @@ class IndividualCity extends Component {
                   labelPosition='left'>
                   <Icon name='edit' />
                   Edit
+                </Button>
+                <Button
+                  onClick={()=> this.postDelete(post.id)}
+                  size='mini'
+                  icon
+                  labelPosition='left'>
+                  <Icon name='window close' />
+                  Remove Comment
                 </Button>
               </Comment.Content>
             </Comment>

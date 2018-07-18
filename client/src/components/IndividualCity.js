@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CityShowWrapper from './styles/CityShowWrapper';
-import { Button, Popup, Comment, Header } from 'semantic-ui-react';
+import { Button, Popup, Comment, Header, Icon } from 'semantic-ui-react';
 
 class IndividualCity extends Component {
   state = {
@@ -41,11 +41,19 @@ class IndividualCity extends Component {
           return (
             <Comment>
               <Comment.Content>
-              <Comment.Author as='a'>{post.title}</Comment.Author>
-              <Comment.Metadata>
-                <div>{post.created_at}</div>
-              </Comment.Metadata>
-              <Comment.Text>{post.body}</Comment.Text>
+                <Comment.Author as='a'>{post.title}</Comment.Author>
+                <Comment.Metadata>
+                  <div>{post.created_at}</div>
+                </Comment.Metadata>
+                <Comment.Text>{post.body}</Comment.Text>
+                <Button
+                  href={`/cities/${this.state.city.id}/posts/${post.id}/edit`}
+                  size='mini'
+                  icon
+                  labelPosition='left'>
+                  <Icon name='edit' />
+                  Edit
+                </Button>
               </Comment.Content>
             </Comment>
           )

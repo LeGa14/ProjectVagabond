@@ -7,6 +7,7 @@ import FootNav from './components/FootNav'
 import DesktopNav from './components/DeskTopNav'
 import IndividualCity from './components/IndividualCity'
 import NewPostForm from './components/NewPostForm'
+import EditPostForm from './components/EditPostForm';
 
 const AppBody = styled.div`
   text-align: center;
@@ -54,6 +55,7 @@ class App extends Component {
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/cities/:city_id' component={IndividualCity}/>
             <Route exact path='/cities/:city_id/posts/new' component={NewPostForm}/>
+            <Route exact path='/cities/:city_id/posts/:post_id/edit' component={EditPostForm}/>
           </Switch>
           <FootSpacer/>
           <FootNav/>

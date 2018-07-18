@@ -37,7 +37,7 @@ class IndividualCity extends Component {
           Posts
           <Popup trigger={<Button circular icon='plus' size='big' color='black' href={`/cities/${this.state.city.id}/posts/new`} />} content='Add a new posts to this city' />
         </Header>
-        {this.state.posts.map((post) => {
+        {this.state.posts.reverse().map((post) => {
           return (
             <Comment>
               <Comment.Content>

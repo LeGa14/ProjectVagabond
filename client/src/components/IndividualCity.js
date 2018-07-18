@@ -34,7 +34,7 @@ class IndividualCity extends Component {
         <img src={this.state.city.img_url} />
         <Header as='h3' dividing>
           Posts
-          <Popup trigger={<Button circular icon='plus' size='big' color='black' href='/cities/:city_id/posts/new' />} content='Add a new posts to this city' />
+          <Popup trigger={<Button circular icon='plus' size='big' color='black' href="/cities//posts/new" />} content='Add a new posts to this city' />
         </Header>
         {this.state.posts.map((post) => {
           return (

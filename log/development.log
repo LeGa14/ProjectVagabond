@@ -2355,3 +2355,28 @@ Processing by Api::PostsController#show as HTML
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/api/cities/1" for 127.0.0.1 at 2018-07-18 15:50:03 -0400
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Kevinator/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 23ms (Views: 0.9ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/cities/1/posts/15" for 127.0.0.1 at 2018-07-18 15:50:03 -0400
+Processing by Api::PostsController#show as HTML
+  Parameters: {"city_id"=>"1", "id"=>"15"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:8
+Completed 200 OK in 27ms (Views: 0.7ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-18 15:54:31 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+

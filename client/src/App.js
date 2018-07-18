@@ -49,7 +49,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={HomePage}/>
             <Route exact path='/cities/:city_id' component={IndividualCity}/>
-            <Route exact path='/:city/post' component={NewPostForm}/>
+            <Route exact path='/cities/:city_id/posts/new' component={NewPostForm}/>
           </Switch>
           <FootNav/>
         </AppBody>

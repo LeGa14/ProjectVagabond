@@ -42,7 +42,7 @@ export default class FootNav extends Component {
             <MenuWrapper>
                 <StyledMenu inverted icon='labeled'>
                     <Menu.Item
-                        name='home' href='/'
+                        name='home'
                         active={activeItem === 'home'}
                         onClick={this.handleItemClick}
                     >
@@ -50,7 +50,7 @@ export default class FootNav extends Component {
                         Log In
                     </Menu.Item>
                     <Menu.Item
-                        name='messages'
+                        name='messages'href='/'
                         active={activeItem === 'messages'}
                         onClick={this.handleItemClick}
                     >

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CityShowWrapper from './styles/CityShowWrapper';
-import { Button, Popup, Comment, Header } from 'semantic-ui-react';
+import { Comment, Header } from 'semantic-ui-react';
 
 class ShowPost extends Component {
     state = {
@@ -32,7 +32,7 @@ class ShowPost extends Component {
         return (
             <CityShowWrapper>
                 <h1>{this.state.post.name}</h1>
-                <img src={this.state.city.img_url} />
+                <img src={this.state.city.img_url} alt={`arieal of ${this.state.city.name}`}/>
                 <p>
                     <Header as='h3' dividing>
                         {`Here's what >User Name Here< had to say about ${this.state.city.name}`}

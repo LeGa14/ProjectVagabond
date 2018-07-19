@@ -12,6 +12,7 @@ const Wrapper = styled.form`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 90vh;
+    
     h1 {
         grid-column: 2;
         grid-row: 1;
@@ -54,7 +55,7 @@ class NewPostForm extends Component {
     state = {
         title: '',
         body: '',
-        user_id: 1
+        user_id: 5
     }
 
     handleChange = (event) => {

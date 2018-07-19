@@ -14,7 +14,7 @@ body {
   }
   @media(min-width: 1133px){
     body{
-      background-size: 1133px 780px;
+      background-size: 80% 100%;
       background-position: center
     }
   }

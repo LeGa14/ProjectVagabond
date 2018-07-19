@@ -4425,3 +4425,10 @@ Processing by Api::CitiesController#index as HTML
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-19 10:28:07 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+

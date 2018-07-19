@@ -29,9 +29,7 @@ class IndividualCity extends Component {
   }
 
   postDelete = async (id) => {
-    const deletePost = await axios.delete(`/api/cities/${this.state.city.id}/posts/${id}`)
     const setNewState = await axios.get(`/api/cities/${this.state.city.id}/posts`)
-
     this.setState({
       posts: setNewState.data
     })
@@ -42,7 +40,7 @@ class IndividualCity extends Component {
     return (
       <CityShowWrapper>
         <h1>{this.state.city.name}</h1>
-        <img src={this.state.city.img_url} />
+        <img src={this.state.city.img_url} alt={this.state.city.name}/>
         <p>
         <Header as='h3' dividing>
           Posts
@@ -52,7 +50,7 @@ class IndividualCity extends Component {
           const trunicate = post.body.substring(0,254)
           let relative = distanceInWords(post.created_at, new Date())
           return (
-            <Comment>
+            <Comment key={post.id}>
               <Comment.Content>
                 <Comment.Author as='a' href={`/cities/${this.state.city.id}/posts/${post.id}`}>{post.title}</Comment.Author>
                 <Comment.Metadata>

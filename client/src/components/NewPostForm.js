@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import { Button, Icon } from 'semantic-ui-react';
 
 const Wrapper = styled.form`
     margin: auto;
+    margin-top: 10vh;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -14,16 +16,21 @@ const Wrapper = styled.form`
     h1 {
         grid-column: 2;
         grid-row: 1;
+        background-color: rgb(69,83,68);
+        color: rgb(210,211,212);
+        font-family: 'Bitter', serif;
     }
     form {
-        grid-column: 2;
-        grid-row: 2;
-        
-    }
-    form label{
-        font-size: 35px;
-        color:white;
-    }
+          grid-column: 2;
+          grid-row: 2;
+          background-color: rgb(69,83,68);
+          padding: 10% 2%;
+          label {
+            color: rgb(210,211,212);
+            font-family: 'Bitter', serif;
+            font-size: 1.5rem;
+          }
+      }
 `
 
 const StyledInput = styled.input`
@@ -74,7 +81,7 @@ class NewPostForm extends Component {
         return (
             <Wrapper>
                 <h1>New Post</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form class="style_me" onSubmit={this.handleSubmit}>
                     <label for='title'>Title:</label>
                     <StyledInput
                         id='title'
@@ -91,10 +98,16 @@ class NewPostForm extends Component {
                         value={this.state.body}
                         onChange={(event) => this.handleChange(event)}
                     />
-                    <input
-                        type="submit"
-                        value="Post"
-                    />
+                     <Button
+                  class="submit"
+                  type="submit"
+                  value="post"
+                  size='mini'
+                  icon
+                  labelPosition='left'>
+                  <Icon name='pencil alternate' />
+                  Add New Post
+          </Button>
                 </form>
             </Wrapper>
         );

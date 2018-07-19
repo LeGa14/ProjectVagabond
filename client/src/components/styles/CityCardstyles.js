@@ -12,8 +12,15 @@ const CityCardStyle = styled.div`
     &:hover{
      box-shadow: none;
      width: 82%;
+     @media(min-width: 600px){
+        width: 545px;
+    }
+    }
+    @media(min-width: 600px){
+        width: 540px;
     }
  }
-`
+ `
+ 
 
 export default CityCardStyle

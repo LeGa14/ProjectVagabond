@@ -7,20 +7,38 @@ const CityShowWrapper = styled.div`
         color: rgb(210,211,212);
         font-family: 'Bitter', serif;
         font-size: 3rem;
-        width: 90%
+        width: 90%;
+        @media(min-width: 600px){
+            max-width: 540px;
+        }
+    }
+    div {
+        padding-bottom: 2vh;
+        color: #a4afa1;
     }
     img {
         width: 90%;
+        @media(min-width: 600px){
+            max-width: 540px;
+        }
     }
     p {
         background-color: rgb(69,83,68);
         width: 90%;
         margin: 0 auto;
+        font-family: 'Bitter', serif;
+        @media(min-width: 600px){
+            max-width: 540px;
+        }
     }
     a {
-        color: rgb(39,43,38);
+        color: rgb(179,183,178);
         font-size: 1.5rem;
         font-weight: 700;
+        font-family: 'Bitter', serif;
+    }
+    .content{
+        border-bottom: 1px solid rgba(31,32,33,0.4);
     }
     .text {
         max-width: 80%;

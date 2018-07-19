@@ -12,14 +12,17 @@ const HomeBody = styled.div`
         margin: 10vh auto;
         margin-bottom: 35rem;
         padding: 1vh 4vw;
-        font-size: 1.5rem;
+        font-size: 1rem;
         background-color: rgb(69,83,68);
         color: rgb(210,211,212);
         max-width: 100%;
         box-shadow: 1px 1px rgba(0,0,0,0.6);
-        @media(orientation: portrait) {
-            font-size: 1rem;
-            max-width: 80%;
+        @media(orientation: landscape) {
+            font-size: 1.5rem;
+            max-width: 90%;
+        }
+        @media(min-width: 1133px){
+            max-width: 1133px
         }
     }
     

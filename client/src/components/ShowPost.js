@@ -3,7 +3,6 @@ import axios from 'axios';
 import CityShowWrapper from './styles/CityShowWrapper';
 import { Button, Popup, Comment, Header } from 'semantic-ui-react';
 
-
 class ShowPost extends Component {
     state = {
         city: {},

@@ -26,6 +26,7 @@ const CityShowWrapper = styled.div`
         background-color: rgb(69,83,68);
         width: 90%;
         margin: 0 auto;
+        font-family: 'Bitter', serif;
         @media(min-width: 600px){
             max-width: 540px;
         }

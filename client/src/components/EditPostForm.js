@@ -5,6 +5,7 @@ import { Button, Icon } from 'semantic-ui-react';
 
 const Wrapper = styled.form`
       margin: auto;
+      margin-top: 10vh;
       display: grid;
       justify-content: center;
       align-items: center;

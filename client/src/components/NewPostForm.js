@@ -10,6 +10,7 @@ const Wrapper = styled.form`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     height: 90vh;
+    
     h1 {
         grid-column: 2;
         grid-row: 1;
@@ -17,6 +18,11 @@ const Wrapper = styled.form`
     form {
         grid-column: 2;
         grid-row: 2;
+        
+    }
+    form label{
+        font-size: 35px;
+        color:white;
     }
 `
 

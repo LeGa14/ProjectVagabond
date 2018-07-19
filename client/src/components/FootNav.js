@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Icon, Menu } from 'semantic-ui-react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 const MenuWrapper = styled.div`
     position: fixed;

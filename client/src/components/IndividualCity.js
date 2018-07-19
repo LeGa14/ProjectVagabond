@@ -49,6 +49,7 @@ class IndividualCity extends Component {
           <Popup trigger={<Button circular icon='plus' size='big' color='black' href={`/cities/${this.state.city.id}/posts/new`} />} content='Add a new posts to this city' />
         </Header>
         {this.state.posts.reverse().map((post) => {
+          const trunicate = post.body.substring(0,254)
           return (
             <Comment>
               <Comment.Content>
@@ -56,7 +57,7 @@ class IndividualCity extends Component {
                 <Comment.Metadata>
                   <div>{post.created_at}</div>
                 </Comment.Metadata>
-                <Comment.Text>{post.body}</Comment.Text>
+                <Comment.Text>{trunicate}</Comment.Text>
                 <Button
                   href={`/cities/${this.state.city.id}/posts/${post.id}/edit`}
                   size='mini'

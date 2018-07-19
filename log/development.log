@@ -4435,3 +4435,12 @@ Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
 
 =======
 >>>>>>> 3fc199bbd3ac549c26d3c8feb4a9c49c7321bafa
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-19 12:08:16 -0400
+  [1m[35m (13.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/L.E.G./.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 23ms (Views: 9.7ms | ActiveRecord: 6.0ms)
+
+

@@ -19,17 +19,13 @@ const HomeBody = styled.div`
         box-shadow: 1px 1px rgba(0,0,0,0.6);
         @media(orientation: portrait) {
             font-size: 1rem;
+            max-width: 80%;
         }
     }
-
+    
     .home-splash{
         height: 100vh;
         margin-top: 5vh;
-    }
-
-    .cardStuff > img {
-        position: absolute;
-        clip-path: rect(250px, 0, 0, 0);
     }
 `
 const ListIntro = styled.div`
@@ -67,21 +63,20 @@ class HomePage extends Component {
                 <div>
                     <CityCardStyle key={city.id}>
                         <Card className>
-                            {/* <figure>
+                            <Link to={`/cities/${city.id}`}>
                                 <Image src={city.img_url} />
-                            </figure> */}
-                            <Container fluid>
-                                <Image src={city.img_url} alt={`Picture of ${city.name}`}/>
-                            </Container>
+                            </Link>
                             <Card.Content>
-                                <Card.Header>{city.name}</Card.Header>
+                                <Link to={`/cities/${city.id}`}>
+                                    <Card.Header>{city.name}</Card.Header>
+                                </Link>
                                 {/* <Card.Meta>Where we call "Home"</Card.Meta>
                             <Card.Description>A thriving metropolitan city situated in the South-East United States.</Card.Description> */}
                             </Card.Content>
                             <Card.Content extra>
                                 <Icon name='comment' />
                                 {/* we can do a comment count here if desired */}
-                                <Link to={`/cities/${city.id}`}>View Comments</Link>
+                                <Link to={`/cities/${city.id}/posts`}>View Comments</Link>
                             </Card.Content>
                         </Card>
                     </CityCardStyle>
@@ -90,11 +85,11 @@ class HomePage extends Component {
         })
 
         return (
-            <HomeBody>
-                <div className="home-splash">
-                <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers. Post about your favorite cities and see what others have to say about the sites they have been to. Here at Vagabond, we love travel and nothing beats first-hand experiences, but we'd still love to hear about your adventures.</p>
+            <HomeBody id='homeSplash'>
+                <div className="home-splash" >
+                    <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers. Post about your favorite cities and see what others have to say about the sites they have been to. Here at Vagabond, we love travel and nothing beats first-hand experiences, but we'd still love to hear about your adventures.</p>
                 </div>
-                <ListIntro>Where have you Been?</ListIntro>
+                <ListIntro id="cityList">Where have you Been?</ListIntro>
                 {cityList}
             </HomeBody>
         );

@@ -45,16 +45,21 @@ export default class DesktopNav extends Component {
       <TitleNav>
         <Menu pointing secondary>
         <h1>Vagabond</h1>
-          <Menu.Item name='home' href='/' active={activeItem === 'home'} onClick={this.handleItemClick} />
+          <Menu.Item name='home' 
+          href='/' 
+          active={activeItem === 'home'} 
+          onClick={this.handleItemClick} />
           <Menu.Item
             name='Login'
             active={activeItem === 'Login'}
             onClick={this.handleItemClick}
           />
           <Menu.Item
+            
             name='Sites'
             active={activeItem === 'Sites'}
             onClick={this.handleItemClick}
+            href="#cityList"
           />
           <Menu.Menu position='right'>
             <Menu.Item

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import CityShowWrapper from './styles/CityShowWrapper';
-import { Comment, Header } from 'semantic-ui-react';
+import { Comment, Header, Button, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom'
 
 class ShowPost extends Component {
     state = {
@@ -43,20 +44,14 @@ class ShowPost extends Component {
                     </h2>
                     <Comment.Text>{this.state.post.body}</Comment.Text>
                     </div>
-                    {/* {this.state.post.map((post) => {
-          return (
-            <Comment>
-              <Comment.Content>
-              <Comment.Author as='a'>{post.title}</Comment.Author>
-              <Comment.Metadata>
-                <div>{post.created_at}</div>
-              </Comment.Metadata>
-              <Comment.Text>{post.body}</Comment.Text>
-              </Comment.Content>
-            </Comment>
-          )
-        }
-        )} */}
+                    <Button
+                        as={Link} to={`/cities/${this.props.match.params.city_id}`}
+                        size='mini'
+                        icon
+                        labelPosition='left'>
+                        <Icon name='undo' />
+                        Return to City
+                    </Button>
                 </p>
             </CityShowWrapper>
         );

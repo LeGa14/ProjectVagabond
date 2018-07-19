@@ -19,10 +19,12 @@ const HomeBody = styled.div`
         box-shadow: 1px 1px rgba(0,0,0,0.6);
         @media(orientation: landscape) {
             font-size: 1.5rem;
-            max-width: 90%;
         }
         @media(min-width: 1133px){
-            max-width: 1133px
+        max-width: 906px;
+        }
+        @media(min-width: 1134px){
+        max-width: 80%;
         }
     }
     
@@ -76,12 +78,9 @@ class HomePage extends Component {
                                 <Link to={`/cities/${city.id}`}>
                                     <Card.Header>{city.name}</Card.Header>
                                 </Link>
-                                {/* <Card.Meta>Where we call "Home"</Card.Meta>
-                            <Card.Description>A thriving metropolitan city situated in the South-East United States.</Card.Description> */}
                             </Card.Content>
                             <Card.Content extra>
                                 <Icon name='comment' />
-                                {/* we can do a comment count here if desired */}
                                 <Link to={`/cities/${city.id}/`}>View Comments</Link>
                             </Card.Content>
                         </Card>

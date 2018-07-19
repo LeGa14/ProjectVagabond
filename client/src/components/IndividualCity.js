@@ -29,6 +29,7 @@ class IndividualCity extends Component {
   }
 
   postDelete = async (id) => {
+    await axios.delete(`/api/cities/${this.state.city.id}/posts/${id}`)
     const setNewState = await axios.get(`/api/cities/${this.state.city.id}/posts`)
     this.setState({
       posts: setNewState.data

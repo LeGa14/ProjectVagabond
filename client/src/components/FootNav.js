@@ -50,7 +50,7 @@ export default class FootNav extends Component {
                         Log In
                     </Menu.Item>
                     <Menu.Item
-                        name='messages'href='/'
+                        name='messages'as={Link} to='/'
                         active={activeItem === 'messages'}
                         onClick={this.handleItemClick}
                     >

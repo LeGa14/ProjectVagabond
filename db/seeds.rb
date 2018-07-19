@@ -9,6 +9,7 @@ jdoe = User.create({
     current_city: "Atlanta",
     fav_city: "Atlanta"
 })
+
 rfake = User.create({
     username: "Ryu Fake",
     email: "streetfighter@cap.com",

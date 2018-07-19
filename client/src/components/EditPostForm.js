@@ -120,7 +120,7 @@ class EditPostForm extends Component {
                   icon
                   labelPosition='left'>
                   <Icon name='pencil alternate' />
-                  confirm Edit
+                  Confirm Edit
           </Button>
         </form>
       </Wrapper>

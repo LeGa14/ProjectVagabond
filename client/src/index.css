@@ -8,9 +8,10 @@ body {
   background-attachment: fixed;
   background-color: #30362e;
 }
-@media(min-width: 500px) {
+@media(min-width: 800px) {
   body {
-    
+    background-size: 90% 100%;
+    background-position: center;
   }
 }
 @media(min-width: 730px) {

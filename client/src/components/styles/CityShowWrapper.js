@@ -14,6 +14,7 @@ const CityShowWrapper = styled.div`
     }
     div {
         padding-bottom: 2vh;
+        color: #a4afa1;
     }
     img {
         width: 90%;
@@ -30,9 +31,10 @@ const CityShowWrapper = styled.div`
         }
     }
     a {
-        color: rgb(39,43,38);
+        color: rgb(179,183,178);
         font-size: 1.5rem;
         font-weight: 700;
+        font-family: 'Bitter', serif;
     }
     .content{
         border-bottom: 1px solid rgba(31,32,33,0.4);

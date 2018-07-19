@@ -40,6 +40,9 @@ const ListIntro = styled.div`
     color: rgb(210,211,212);
     box-shadow: 1px 1px rgba(0,0,0,0.6);
     line-height: 3rem;
+    @media(min-width: 600px){
+        width: 540px;
+    }
 `
 
 class HomePage extends Component {

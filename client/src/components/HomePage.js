@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import axios from 'axios'
-import { Card, Icon, Image } from 'semantic-ui-react'
+import { Card, Icon, Image, Container } from 'semantic-ui-react'
 import CityCardStyle from './styles/CityCardstyles';
 import { Link } from 'react-router-dom'
 
@@ -17,9 +17,19 @@ const HomeBody = styled.div`
         color: rgb(210,211,212);
         max-width: 100%;
         box-shadow: 1px 1px rgba(0,0,0,0.6);
-        @media(max-width: 660px) {
+        @media(orientation: portrait) {
             font-size: 1rem;
         }
+    }
+
+    .home-splash{
+        height: 100vh;
+        margin-top: 5vh;
+    }
+
+    .cardStuff > img {
+        position: absolute;
+        clip-path: rect(250px, 0, 0, 0);
     }
 `
 const ListIntro = styled.div`
@@ -55,28 +65,35 @@ class HomePage extends Component {
         const cityList = this.state.cities.map((city) => {
             return (
                 <div>
-                <CityCardStyle key={city.id}>
-                    <Card>
-                        <Image src={city.img_url} />
-                        <Card.Content>
-                            <Card.Header>{city.name}</Card.Header>
-                            {/* <Card.Meta>Where we call "Home"</Card.Meta>
+                    <CityCardStyle key={city.id}>
+                        <Card className>
+                            {/* <figure>
+                                <Image src={city.img_url} />
+                            </figure> */}
+                            <Container fluid>
+                                <Image src={city.img_url} alt={`Picture of ${city.name}`}/>
+                            </Container>
+                            <Card.Content>
+                                <Card.Header>{city.name}</Card.Header>
+                                {/* <Card.Meta>Where we call "Home"</Card.Meta>
                             <Card.Description>A thriving metropolitan city situated in the South-East United States.</Card.Description> */}
-                        </Card.Content>
-                        <Card.Content extra>
+                            </Card.Content>
+                            <Card.Content extra>
                                 <Icon name='comment' />
                                 {/* we can do a comment count here if desired */}
                                 <Link to={`/cities/${city.id}`}>View Comments</Link>
-                        </Card.Content>
-                    </Card>
-                </CityCardStyle>
-              </div>
+                            </Card.Content>
+                        </Card>
+                    </CityCardStyle>
+                </div>
             )
         })
 
         return (
             <HomeBody>
+                <div className="home-splash">
                 <p>Weclome to Vagabond, your go-to app for seeing sites and connecting with other Travelers. Post about your favorite cities and see what others have to say about the sites they have been to. Here at Vagabond, we love travel and nothing beats first-hand experiences, but we'd still love to hear about your adventures.</p>
+                </div>
                 <ListIntro>Where have you Been?</ListIntro>
                 {cityList}
             </HomeBody>

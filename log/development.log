@@ -5605,6 +5605,81 @@ Migrating to CreateFriendlyIdSlugs (20180719145713)
   ↳ db/seeds.rb:89
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:89
+<<<<<<< HEAD
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-19 12:27:54 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/benjaminmccombs/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 14ms (Views: 5.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-19 12:29:28 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-19 12:29:37 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-19 12:33:01 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/cities/8" for 127.0.0.1 at 2018-07-19 12:33:09 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/8/posts" for 127.0.0.1 at 2018-07-19 12:33:09 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"8"}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 8]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 25ms (Views: 11.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/cities" for 127.0.0.1 at 2018-07-19 12:33:10 -0400
+Processing by Api::CitiesController#index as HTML
+  [1m[36mCity Load (0.6ms)[0m  [1m[34mSELECT "cities".* FROM "cities"[0m
+  ↳ app/controllers/api/cities_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/8" for 127.0.0.1 at 2018-07-19 12:35:02 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mCity Load (0.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/8/posts" for 127.0.0.1 at 2018-07-19 12:35:02 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"8"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 8]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.9ms)
+
+
+=======
   [1m[35m (14.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
   [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
@@ -5791,3 +5866,4 @@ Migrating to CreateFriendlyIdSlugs (20180719145713)
   ↳ db/seeds.rb:89
   [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:89
+>>>>>>> master

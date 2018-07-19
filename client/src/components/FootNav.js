@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Icon, Menu } from 'semantic-ui-react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 const MenuWrapper = styled.div`
     position: fixed;
@@ -50,7 +51,7 @@ export default class FootNav extends Component {
                         Log In
                     </Menu.Item>
                     <Menu.Item
-                        name='messages'href='/'
+                        name='messages'as={Link} to='/'
                         active={activeItem === 'messages'}
                         onClick={this.handleItemClick}
                     >

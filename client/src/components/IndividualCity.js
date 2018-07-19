@@ -22,7 +22,6 @@ class IndividualCity extends Component {
         city: cityResponse.data,
         posts: postsResponse.data
       })
-      console.log(this.state)
     } catch (err) {
       console.error(err)
     }

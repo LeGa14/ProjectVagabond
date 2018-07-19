@@ -264,3 +264,39 @@ Processing by Api::PostsController#index as HTML
 Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/api/cities/10" for 127.0.0.1 at 2018-07-19 14:16:34 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/cities/10/posts" for 127.0.0.1 at 2018-07-19 14:16:35 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"10"}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 10]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/10" for 127.0.0.1 at 2018-07-19 14:17:01 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCity Load (7.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 10ms (Views: 0.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/cities/10/posts" for 127.0.0.1 at 2018-07-19 14:17:01 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"10"}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 10]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+

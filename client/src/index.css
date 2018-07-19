@@ -6,7 +6,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #7DCFB6;
+  background-color: #30362e;
+}
+@media(min-width: 500px) {
+  body {
+    
+  }
 }
 @media(min-width: 730px) {
   body {

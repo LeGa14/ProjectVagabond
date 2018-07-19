@@ -1,0 +1,116 @@
+Started GET "/api/cities/10" for 127.0.0.1 at 2018-07-19 14:10:22 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/benjaminmccombs/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCity Load (0.5ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 21ms (Views: 0.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/cities/10/posts" for 127.0.0.1 at 2018-07-19 14:10:22 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"10"}
+  [1m[36mCity Load (0.7ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 10]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 32ms (Views: 12.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/api/cities/undefined" for 127.0.0.1 at 2018-07-19 14:10:33 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find City with 'id'=undefined):
+  
+app/controllers/api/cities_controller.rb:8:in `show'
+Started GET "/api/cities/undefined" for 127.0.0.1 at 2018-07-19 14:11:39 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"undefined"}
+  [1m[36mCity Load (6.4ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 404 Not Found in 8ms (ActiveRecord: 6.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find City with 'id'=undefined):
+  
+app/controllers/api/cities_controller.rb:8:in `show'
+Started GET "/api/cities/10" for 127.0.0.1 at 2018-07-19 14:12:02 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCity Load (2.1ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/cities/10/posts" for 127.0.0.1 at 2018-07-19 14:12:02 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"10"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 10]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/cities/10" for 127.0.0.1 at 2018-07-19 14:12:15 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCity Load (49.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 51ms (Views: 0.5ms | ActiveRecord: 49.3ms)
+
+
+Started GET "/api/cities/10/posts" for 127.0.0.1 at 2018-07-19 14:12:15 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"10"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 10]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/cities/10" for 127.0.0.1 at 2018-07-19 14:13:22 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCity Load (1.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/cities/10/posts" for 127.0.0.1 at 2018-07-19 14:13:22 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"10"}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 10]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/cities/10" for 127.0.0.1 at 2018-07-19 14:13:26 -0400
+Processing by Api::CitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCity Load (0.3ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/cities_controller.rb:8
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/cities/10/posts" for 127.0.0.1 at 2018-07-19 14:13:26 -0400
+Processing by Api::PostsController#index as HTML
+  Parameters: {"city_id"=>"10"}
+  [1m[36mCity Load (0.2ms)[0m  [1m[34mSELECT  "cities".* FROM "cities" WHERE "cities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/posts_controller.rb:3
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."city_id" = $1[0m  [["city_id", 10]]
+  ↳ app/controllers/api/posts_controller.rb:4
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.8ms)
+
+

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 import { Button, Icon } from 'semantic-ui-react';
 
 const Wrapper = styled.form`
@@ -98,16 +99,24 @@ class NewPostForm extends Component {
                         value={this.state.body}
                         onChange={(event) => this.handleChange(event)}
                     />
-                     <Button
-                  class="submit"
-                  type="submit"
-                  value="post"
-                  size='mini'
-                  icon
-                  labelPosition='left'>
-                  <Icon name='pencil alternate' />
-                  Add New Post
-          </Button>
+                    <Button
+                        class="submit"
+                        type="submit"
+                        value="post"
+                        size='mini'
+                        icon
+                        labelPosition='left'>
+                        <Icon name='pencil alternate' />
+                        Add New Post
+                    </Button>
+                    <Button
+                        as={Link} to={`/cities/${this.props.match.params.city_id}`}
+                        size='mini'
+                        icon
+                        labelPosition='left'>
+                        <Icon name='cancel' />
+                        Cancel Post
+                    </Button>
                 </form>
             </Wrapper>
         );

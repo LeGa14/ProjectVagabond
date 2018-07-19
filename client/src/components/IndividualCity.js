@@ -33,8 +33,8 @@ class IndividualCity extends Component {
     this.setState({
       posts: setNewState.data
     })
-    }
- 
+  }
+
 
   render() {
     return (
@@ -42,8 +42,8 @@ class IndividualCity extends Component {
         <h1>{this.state.city.name}</h1>
         <img src={this.state.city.img_url} alt={this.state.city.name}/>
         <p>
-        <Header as='h3' dividing>
-          Posts
+          <Header as='h3' dividing>
+            Posts
           <Popup trigger={<Button circular icon='plus' size='big' color='black' href={`/cities/${this.state.city.id}/posts/new`} />} content='Add a new posts to this city' />
         </Header>
         {this.state.posts.reverse().map((post) => {
@@ -65,18 +65,28 @@ class IndividualCity extends Component {
                   <Icon name='edit' />
                   Edit
                 </Button>
-                <Button
-                  onClick={()=> this.postDelete(post.id)}
-                  size='mini'
-                  icon
-                  labelPosition='left'>
-                  <Icon name='window close' />
-                  Remove Comment
+                  <Popup
+                    trigger={
+                      <Button
+                        size='mini'
+                        icon
+                        labelPosition='left'>
+                        <Icon name='window close' />
+                        Remove Comment
+                </Button>} flowing hoverable>
+                    <Button
+                      onClick={() => this.postDelete(post.id)}
+                      size='mini'
+                      icon
+                      labelPosition='left'>
+                      <Icon name='check square outline' />
+                      Confirm Delete
                 </Button>
-              </Comment.Content>
-            </Comment>
-          )
-        })}
+                  </Popup>
+                </Comment.Content>
+              </Comment>
+            )
+          })}
         </p>
       </CityShowWrapper>
     );

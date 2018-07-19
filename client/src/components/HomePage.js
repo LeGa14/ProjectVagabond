@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components'
 import axios from 'axios'
-import { Card, Icon, Image, Container } from 'semantic-ui-react'
+import { Card, Icon, Image } from 'semantic-ui-react'
 import CityCardStyle from './styles/CityCardstyles';
 import { Link } from 'react-router-dom'
 

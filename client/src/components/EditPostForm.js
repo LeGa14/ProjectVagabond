@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 import { Button, Icon } from 'semantic-ui-react';
 
 const Wrapper = styled.form`
@@ -63,14 +64,14 @@ class EditPostForm extends Component {
     const cityId = this.props.match.params.city_id
     const postId = this.props.match.params.post_id
     axios.get(`/api/cities/${cityId}/posts/${postId}`)
-    .then((res) => {
-      this.setState({
-        title: res.data.title,
-        body: res.data.body
+      .then((res) => {
+        this.setState({
+          title: res.data.title,
+          body: res.data.body
+        })
+      }).catch((err) => {
+        console.error(err)
       })
-    }).catch((err) => {
-      console.error(err)
-    })
   }
 
   handleChange = (event) => {
@@ -113,15 +114,23 @@ class EditPostForm extends Component {
             value={this.state.body}
             onChange={(event) => this.handleChange(event)}
           />
-           <Button
-                  class="submit"
-                  type="submit"
-                  value="post"
-                  size='mini'
-                  icon
-                  labelPosition='left'>
-                  <Icon name='pencil alternate' />
-                  Confirm Edit
+          <Button
+            class="submit"
+            type="submit"
+            value="post"
+            size='mini'
+            icon
+            labelPosition='left'>
+            <Icon name='pencil alternate' />
+            Confirm Edit
+          </Button>
+          <Button
+            as={Link} to={`/cities/${this.props.match.params.city_id}`}
+            size='mini'
+            icon
+            labelPosition='left'>
+            <Icon name='cancel' />
+            Cancel Edit
           </Button>
         </form>
       </Wrapper>

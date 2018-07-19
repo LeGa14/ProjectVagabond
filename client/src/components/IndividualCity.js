@@ -55,7 +55,7 @@ class IndividualCity extends Component {
               <Comment.Content>
                 <Comment.Author as='a' href={`/cities/${this.state.city.id}/posts/${post.id}`}>{post.title}:</Comment.Author>
                 <Comment.Metadata>
-                  <div>{relative}</div>
+                  <div>Posted {relative} ago</div>
                 </Comment.Metadata>
                 <Comment.Text>{trunicate}</Comment.Text>
                 <Button

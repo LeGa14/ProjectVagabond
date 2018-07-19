@@ -54,7 +54,6 @@ class HomePage extends Component {
 
         const cityList = this.state.cities.map((city) => {
             return (
-                <div>
                 <CityCardStyle key={city.id}>
                     <Card>
                         <Image src={city.img_url} />
@@ -70,7 +69,6 @@ class HomePage extends Component {
                         </Card.Content>
                     </Card>
                 </CityCardStyle>
-              </div>
             )
         })
 

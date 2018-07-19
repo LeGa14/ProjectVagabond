@@ -44,6 +44,7 @@ export default class DesktopNav extends Component {
       <TitleNav>
         <Menu pointing secondary>
         <h1>Vagabond</h1>
+        
           <Menu.Item name='home' 
           href='/' 
           active={activeItem === 'home'} 
